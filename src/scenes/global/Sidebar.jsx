@@ -80,7 +80,7 @@ const Sidebar = () => {
 								alignItems='center'
 								ml='15px'>
 								<Typography variant='h3' color={colours.grey[100]}>
-									supa dash
+									supadash
 								</Typography>
 								<IconButton onClick={() => setIsCollapsed(!isCollapsed)}>
 									<MenuOutlinedIcon />
