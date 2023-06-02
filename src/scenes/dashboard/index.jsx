@@ -135,7 +135,7 @@ const Dashboard = () => {
 							</Typography>
 							<Typography
 								variant='h3'
-								fontWeight='500'
+								fontWeight='bold'
 								color={colours.greenAccent[500]}>
 								£111,634
 							</Typography>
@@ -151,6 +151,104 @@ const Dashboard = () => {
 					{/* Line Chart */}
 					<Box height='250px' ml='-20px' paddingBottom='5px'>
 						<LineChart isDashboard={true} />
+					</Box>
+				</Box>
+				{/* Transactions */}
+				<Box
+					gridColumn='span 4'
+					gridRow='span 2'
+					backgroundColor={colours.primary[400]}
+					overflow='auto'>
+					<Box
+						display='flex'
+						justifyContent='space-between'
+						alignItems='center'
+						borderBottom={`4px solid ${colours.primary[500]}`}
+						color={colours.grey[100]}
+						p='15px'>
+						<Typography variant='h5' color={colours.grey[100]} fontWeight='600'>
+							Recent Transactions
+						</Typography>
+					</Box>
+					{mockTransactions.map((t, i) => (
+						<Box
+							key={t.txId - i}
+							display='flex'
+							justifyContent='space-between'
+							alignItems='center'
+							borderBottom={`4px solid ${colours.primary[500]}`}
+							p='15px'>
+							<Box>
+								<Typography
+									variant='h5'
+									color={colours.greenAccent[500]}
+									fontWeight='600'>
+									{t.txId}
+								</Typography>
+								<Typography color={colours.grey[100]}>{t.user}</Typography>
+							</Box>
+							<Box color={colours.grey[100]}>{t.date}</Box>
+							<Box
+								backgroundColor={colours.greenAccent[500]}
+								p='5px 10px'
+								borderRadius='4px'>
+								{t.cost}
+							</Box>
+						</Box>
+					))}
+				</Box>
+				{/* Row 3 */}
+				<Box
+					gridColumn='span 4'
+					gridRow='span 2'
+					backgroundColor={colours.primary[400]}
+					p='30px'>
+					<Typography variant='h5' fontWeight='600'>
+						Campaign
+					</Typography>
+					<Box
+						display='flex'
+						flexDirection='column'
+						alignItems='center'
+						mt='25px'>
+						<ProgressBar size='125' />
+						<Typography
+							variant='h5'
+							color={colours.greenAccent[500]}
+							sx={{ mt: '15px' }}>
+							£39,502
+						</Typography>
+						<Typography variant='h5' fontWeight='600'>
+							Misc expenditures and costs included
+						</Typography>
+					</Box>
+				</Box>
+				{/* BAR */}
+				<Box
+					gridColumn='span 4'
+					gridRow='span 2'
+					backgroundColor={colours.primary[400]}>
+					<Typography
+						variant='h5'
+						fontWeight='600'
+						sx={{ p: '30px 30px 0 30px' }}>
+						Sales Quantity
+					</Typography>
+					<Box height='250px' mt='-20px'>
+						<BarChart isDashboard={true} />
+					</Box>
+				</Box>
+				{/* GEO CHART */}
+				<Box
+					gridColumn='span 4'
+					gridRow='span 2'
+					backgroundColor={colours.primary[400]}
+					p='30px'>
+					<Typography variant='h5' fontWeight='600' sx={{ mb: '15px' }}>
+						Traffic Based on Location
+					</Typography>
+					<Box height='200px'>
+						<Geography isDashboard={true} />
 					</Box>
 				</Box>
 			</Box>
