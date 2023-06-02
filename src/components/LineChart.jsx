@@ -72,6 +72,7 @@ const LineChart = ({ isDashboard = false }) => {
 				legend: isDashboard ? undefined : 'count',
 				legendOffset: -40,
 				legendPosition: 'middle',
+				tickValues: 5,
 			}}
 			enableGridX={false}
 			enableGridY={false}

@@ -37,10 +37,14 @@ const Barchart = ({ isDashboard = false }) => {
 						fill: colours.grey[100],
 					},
 				},
+				tooltip: {
+					container: {
+						color: colours.primary[500],
+					},
+				},
 			}}
 			keys={['hot dog', 'burger', 'sandwich', 'kebab', 'fries', 'donut']}
 			indexBy='country'
-			isInteractive={false}
 			margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
 			padding={0.55}
 			innerPadding={2}

@@ -10,10 +10,10 @@ import Invoices from './scenes/invoices';
 import Contact from './scenes/contacts';
 import Bar from './scenes/bar';
 import Form from './scenes/form';
-// import Line from './scenes/line';
+import Line from './scenes/line';
 import Pie from './scenes/pie';
 import FAQ from './scenes/faq';
-// import Georgraphy from './scenes/geography';
+import Georgraphy from './scenes/geography';
 import Calendar from './scenes/calendar';
 
 const App = () => {
@@ -38,9 +38,9 @@ const App = () => {
 							<Route path='/form' element={<Form />} />
 							<Route path='/bar' element={<Bar />} />
 							<Route path='/pie' element={<Pie />} />
-							{/* <Route path='/line' element={<Line />} /> */}
+							<Route path='/line' element={<Line />} />
 							<Route path='/faq' element={<FAQ />} />
-							{/* <Route path='/geography' element={<Georgraphy />} /> */}
+							<Route path='/geography' element={<Georgraphy />} />
 							<Route path='/calendar' element={<Calendar />} />
 						</Routes>
 					</main>
