@@ -10,7 +10,7 @@ const ProgressBar = ({ progress = '0.75', size = '40' }) => {
 		<Box
 			sx={{
 				background: `radial-gradient(${colours.primary[400]} 55%, transparent 56%),
-                conic-gradient(transparent 0deg ${angle}deg, ${colours.blueAccent[500]} ${angle}deg 360deg)
+                conic-gradient(transparent 0deg ${angle}deg, ${colours.blueAccent[500]} ${angle}deg 360deg),
                 ${colours.greenAccent[500]}`,
 				borderRadius: '50%',
 				width: `${size}px`,
